@@ -1,48 +1,43 @@
+import { createSettingsStyles } from "@/assets/styles/settings.styles";
+// import DangerZone from "@/components/DangerZone";
+import Preferences from "@/components/Preferences";
+// import ProgressStats from "@/components/ProgressStats";
 import useTheme from "@/hooks/useTheme";
 import { Ionicons } from "@expo/vector-icons";
-import { Link } from "expo-router";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
-export default function Settings() {
-   const { toggleDarkMode ,colors  } = useTheme()
-   
+import { ScrollView, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+
+const SettingsScreen = () => {
+  const { colors } = useTheme();
+
+  const settingsStyles = createSettingsStyles(colors);
+
   return (
-    <View
-      style={[styles.container, { backgroundColor: colors.gradients.background[0] }]}
-    >
-      <Text style={styles.content}>Settings </Text>
-      <Text style={styles.paragraph}>Settings Page</Text>
-      <Link style={styles.link} href="/(tabs)">
-      <Ionicons size={25} name="home" />
-      </Link>
-      <TouchableOpacity onPress={toggleDarkMode}>
-        
-      </TouchableOpacity>
-    </View>
+    <LinearGradient colors={colors.gradients.background} style={settingsStyles.container}>
+      <SafeAreaView style={settingsStyles.safeArea}>
+        {/* HEADER */}
+        <View style={settingsStyles.header}>
+          <View style={settingsStyles.titleContainer}>
+            <LinearGradient colors={colors.gradients.primary} style={settingsStyles.iconContainer}>
+              <Ionicons name="settings" size={28} color="#ffffff" />
+            </LinearGradient>
+            <Text style={settingsStyles.title}>Settings</Text>
+          </View>
+        </View>
+
+        <ScrollView
+          style={settingsStyles.scrollView}
+          contentContainerStyle={settingsStyles.content}
+          showsVerticalScrollIndicator={false}
+        >
+          {/* <ProgressStats /> */}
+          <Preferences />
+          {/* <DangerZone /> */}
+        </ScrollView>
+      </SafeAreaView>
+    </LinearGradient>
   );
-}
-
-const styles = StyleSheet.create({
-
-  container: {
-    height: "100%",
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  content: {
-
-    fontSize: 25,
-    fontWeight: "bold"
-  },
-  link: {
-    fontSize: 20,
-    color: "blue",
-    marginTop: 20
-  },
-  paragraph: {
-    fontSize: 15,
-    marginTop: 10
-  }
-
-})
+};
+export default SettingsScreen;
