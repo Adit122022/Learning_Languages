@@ -1,3 +1,4 @@
+// 4. **Even/Odd:** Input a number; check if it is Even or Odd.
 import java.util.*;
 
 class EvenOdd{
