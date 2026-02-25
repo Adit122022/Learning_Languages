@@ -22,7 +22,7 @@ A comprehensive 40-question technical guide structured to build proficiency from
 - 🔴 **Level 4**: Advanced & LeetCode Style (Questions 36-40)
 
 - 📜 [**View Full Question Bank**](./JAVA/Questions.md)
-- 📁 [**Assignment Codes**](./JAVA/assignment/)
+- 📁 [**Assignment Codes**](./JAVA/minor_assignment/)
 
 ---
 
