@@ -2,7 +2,7 @@ import java.util.*;
 class ConvertToFahrenheit{
      double f;
      ConvertToFahrenheit(double Celsius){
-        f = ( Celsius * 9.0 /5.0) + 32;
+        this.f = ( Celsius * 9.0 /5.0) + 32;
      }
       void DISPLAY_RESULT(){
         System.out.printf("--- Results ---\nFahrenheit: %.2f\n" ,f);
