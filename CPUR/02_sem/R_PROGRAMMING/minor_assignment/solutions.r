@@ -118,3 +118,5 @@ print_prime_squares <- function(n){
 cat("Squares of starting  6 prime numbers :",prime^2)
 }
 print_prime_squares(2)
+
+
