@@ -9,30 +9,20 @@ combined_vector <- c(v1, v2)
 print(combined_vector)
 
 
-
-
 #2.Write a R program to access the last value in a given vector.
-#2. Access the last value
-# tail() is an easy way, or use indexing:
 print(v1[length(v1)])
 
-
-
 #3. Write a R program to find common elements from multiple vectors.
-#3. Find common elements
 cat("Common in vector :",intersect(v1, v2))
 
 
 # 4. Repeat "A", "B" ten times
-# This repeats the pattern "A", "B" ten times
 repeated_vec <- rep(c("A", "B"), times = 10)
 print(repeated_vec)
 
 
-
 # 5. Check the number of elements
-# You use the length() function. It returns a single integer representing the count of items in the vector.
-
+print(length(v1))
 
 
 # 6. Filtering Stock Levels
@@ -41,6 +31,7 @@ stock <- c(50, 0, 100, -5, 20, 0, 35)
 filter <- stock > 0
 # b. Create valid_stock using the filter
 valid_stock <- stock[filter]
+sum(stock[filter])
 valid_stock
 
 # c. Calculate the median
@@ -54,10 +45,9 @@ temps <- c(22.5, 23.0, NA, 21.5, 24.0, NA, 22.0)
 
 # a. Check which elements are missing
 missing_check <- is.na(temps)
-print(missing_check) # Returns TRUE where NA exists
+print(missing_check) 
 
 # b. Calculate average (mean)
-# We must use na.rm = TRUE to strip the NAs before calculating
 avg_temp <- mean(temps, na.rm = TRUE)
 print(avg_temp)
 
@@ -72,7 +62,6 @@ curved_grades
 
 #b. After adding the points, cap the maximum score at 100. (i.e., if a grade is 103, it should become 100). 
 # Cap the maximum score at 100
-# pmin (parallel minimum) compares each value to 100 and keeps the smaller one
 final_grades <- pmin(curved_grades, 100)
 
 # Display results
@@ -92,7 +81,7 @@ marks <- matrix(c(85, 61, 84,  # Student 1
                   4, 5.2, 0.5), # Student 3
                 nrow = 3 , byrow = TRUE)
 
-# Add names for clarity
+# names for clarity
 rownames(marks) <- c("Aditya", "Bharat", "Unnati")
 colnames(marks) <- c("Maths", "Science", "English")
 marks
@@ -108,7 +97,6 @@ print(subject_averages)
 # c. Find the student with the highest total
 top_student_name <- names(which.max(student_totals))
 print(paste("The student with the highest total is:", top_student_name))
-
 
 
 #10. Create a function in R that prints square of first five prime numbers
