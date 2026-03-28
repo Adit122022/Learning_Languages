@@ -24,7 +24,7 @@ namespace HotelManagementWeb.Controllers
         [HttpPost]
         public IActionResult Calculate(Booking model)
         {
-            // Agar model khali nahi hai, toh Result page dikhao
+            // Agar model khali nahi hai, toh Result page 
             return View("Result", model);
         }
 
