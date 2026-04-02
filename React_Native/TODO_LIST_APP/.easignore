@@ -6,4 +6,4 @@ npm-debug.*
 *.p8
 *.p12
 *.pem
-.env.local
+.env.local  
