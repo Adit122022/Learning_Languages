@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Define a list of days
-days=("Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday" "Sunday")
-
-echo "Days of the week:"
-for day in "${days[@]}"; do
-    echo "- $day"
+days=("Monday" "Tuesday" "WednesDay" "Thursday" "Friday" "Saturday")
+echo "Days of the Week are : "
+for day in "${days[@]}";do
+	echo "-$day"
 done
