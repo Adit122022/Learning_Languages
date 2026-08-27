@@ -1,6 +1,5 @@
 import { Button } from '@react-navigation/elements'
 import { router } from 'expo-router'
-import React from 'react'
 import { Text, View } from 'react-native'
 
 const SignIn = () => {
