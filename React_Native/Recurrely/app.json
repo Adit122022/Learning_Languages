@@ -12,6 +12,9 @@
       "supportsTablet": true
     },
     "android": {
+      "androidNavigationBar": {
+        "visible": "transparent"
+      },
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
