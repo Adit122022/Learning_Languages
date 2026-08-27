@@ -1,50 +1,67 @@
-# Welcome to your Expo app 👋
+# 📝 Premium Todo List App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A sleek, modern, and beautiful Todo List mobile application built with **React Native**, **Expo Router**, and **Convex backend**. Designed with high aesthetics, smooth transitions, and a premium dark/light mode UI.
 
-## Get started
+---
 
-1. Install dependencies
+## 📸 Screenshots & Mockups
 
-   ```bash
-   npm install
-   ```
+| App Icon | Active Tasks | Settings | Completed Tasks |
+| :---: | :---: | :---: | :---: |
+| <img src="./assets/images/icon.png" width="160" alt="App Icon" style="border-radius: 24px;" /> | <img src="./assets/screenshots/todo-create.png" width="200" alt="App Icon" style="border-radius: 24px;" /> | <img src="./assets/screenshots/settings.png" width="200" alt="App Icon" style="border-radius: 24px;" /> | <img src="./assets/screenshots/todo-completed.png" width="200" alt="App Icon" style="border-radius: 24px;" /> |
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## ✨ Features
 
-In the output, you'll find options to open the app in a
+- **🎨 Premium UI/UX:** Stunning color palettes, soft shadows, and clean layouts.
+- **⚡ Real-time Sync:** Powered by Convex backend for instantaneous data synchronization.
+- **📂 File-based Routing:** Utilizing Expo Router for robust and native navigation.
+- **📱 Responsive & Native Feel:** Built with modern React Native component guidelines.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🚀 Download APK (Android)
 
-## Get a fresh project
+You can download the compiled APK file directly to your Android device from the official GitHub Release:
 
-When you're ready, run:
+👉 **[Download TODO.apk (v1.0.0)](https://github.com/Adit122022/Learning_Languages/releases/download/todo-v1.0.0/TODO.apk)**
 
+*Note: For testing, you may need to allow "Install from Unknown Sources" on your Android device.*
+
+---
+
+## 🛠️ Developer Setup & Local Run
+
+### 1. Prerequisites
+Make sure you have Node.js installed on your PC.
+
+### 2. Install Dependencies
+Clone the repository, navigate to this folder, and run:
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 3. Setup Convex Backend URL
+Create a `.env` file in the root of this folder and add your Convex URL:
+```env
+EXPO_PUBLIC_CONVEX_URL=https://animated-octopus-21.convex.cloud
+```
 
-## Learn more
+### 4. Start the App
+Start the Metro bundler:
+```bash
+npx expo start
+```
+- Press **`a`** to open in Android Emulator.
+- Press **`i`** to open in iOS Simulator.
+- Scan the QR code using the **Expo Go** app on your physical device.
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 📦 Building your own APK
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+To build a fresh APK, configure your Expo account and run:
+```bash
+npx eas build --platform android --profile preview
+```
